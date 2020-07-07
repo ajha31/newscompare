@@ -4,6 +4,7 @@ const mongoose=require('mongoose');
 const db=require('./mconnect');
 const newsmodeel = require('../models/newsmodel');
 
+
 var news = mongoose.model('news', newsmodeel, 'indiatv');
 const searchterm='covid';
 //india news scrapping
