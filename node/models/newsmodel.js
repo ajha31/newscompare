@@ -1,9 +1,9 @@
 const mongo=require('mongoose');
 
-var newsmodeel=mongo.model('news',{
+var newsmodeel=mongo.Schema({
     title:{type:String},
     source:{type:String},
     photo:{type:String},
     information:{type:String}
-},'zeenews')
+});
 module.exports=newsmodeel
