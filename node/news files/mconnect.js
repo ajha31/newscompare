@@ -1,6 +1,6 @@
 const mongo=require('mongoose')
 
-mongo.connect('mongodb+srv://aman:aman@cluster0-gq0p1.mongodb.net/news?retryWrites=true&w=majority',{useNewUrlParser: true,useUnifiedTopology: true},(err)=>{
+mongo.connect('YOUR URL',{useNewUrlParser: true,useUnifiedTopology: true},(err)=>{
     if(!err)
     console.log('Mongo db connected');
     else
