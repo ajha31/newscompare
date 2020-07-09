@@ -1,8 +1,6 @@
 const puppeteer=require('puppeteer');
 const mongoose=require('mongoose');
 
-
-const db=require('./mconnect');
 const newsmodeel = require('../models/newsmodel');
 var news = mongoose.model('news', newsmodeel, 'ndtv');
 
@@ -18,6 +16,7 @@ const searchterm='covid';
     let b=[];
     for( let i=0;i<10;i++){
     let d={
+       heading:`covid`,
        title:a.children[i].children[0].innerHTML,
        source:a.children[i].children[1].innerHTML,
        photo:a.children[i].children[2].innerHTML,

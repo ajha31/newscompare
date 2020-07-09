@@ -1,7 +1,6 @@
 const puppeteer=require('puppeteer');
 const mongoose=require('mongoose');
 
-const db=require('./mconnect');
 const newsmodeel = require('../models/newsmodel');
 
 var news = mongoose.model('news', newsmodeel, 'zeenews');
@@ -30,6 +29,7 @@ await page.setUserAgent(userAgent);
         for( let i=0;i<10;i++){
     
         let d={
+            heading:`covid`,
             title:a.children[i].children[0].children[0].children[0].innerHTML,
             source:a.children[i].children[0].children[1].children[0].innerText,
             photo:a.children[i].children[0].children[2].children[0].children[0].children[0].innerHTML,

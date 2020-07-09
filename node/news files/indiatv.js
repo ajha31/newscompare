@@ -1,11 +1,9 @@
 const puppeteer=require('puppeteer');
 const mongoose=require('mongoose');
-
-const db=require('./mconnect');
 const newsmodeel = require('../models/newsmodel');
 
 
-var news = mongoose.model('news', newsmodeel, 'indiatv');
+let news = mongoose.model('news', newsmodeel, 'indiatv');
 const searchterm='covid';
 //india news scrapping
 (async ()=>{
@@ -20,6 +18,7 @@ const searchterm='covid';
       for( let i=0;i<10;i++){
         
         let d={
+           heading:`covid`,
            title:a.children[i].children[1].children[0].innerHTML,
            source:a.children[i].children[1].children[1].innerHTML,
            photo:a.children[i].children[0].innerHTML,
@@ -31,7 +30,7 @@ const searchterm='covid';
     })
    await browser.close();
     // save multiple documents to the collection referenced by Book Model
-  await news.collection.insertMany(data, function (err, docs) {
+  await news.collection.insertMany(data,  (err, docs)=>{
     if (err){ 
     return console.error(err);
     } else {
