@@ -1,0 +1,8 @@
+<div class="main">
+    <app-selector *ngIf="libchan" [channel]="libchan" (getNews)="getlNews($event)" [articles]="larticles">
+        <!-- here *ngif is used to prevent libch variable be initiated before the parent component -->
+    </app-selector>
+    <app-selector *ngIf="conchan" [channel]="conchan"(getNews)="getcNews($event)" [articles]="carticles"></app-selector>
+    <app-selector *ngIf="modchan" [channel]="modchan" (getNews)="getmNews($event)"[articles]="marticles"></app-selector>
+</div>
+

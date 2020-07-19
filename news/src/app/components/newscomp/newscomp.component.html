@@ -1,0 +1,8 @@
+<div class="articles" *ngFor=" let article of article">
+<h1>{{article.topicNo}}</h1>
+<a [routerLink]="[article.heading]"> {{article.heading}}</a>
+<h3>{{article.information}}</h3>
+{{article.photo}}
+<h3>{{article.source}}</h3>
+
+</div>

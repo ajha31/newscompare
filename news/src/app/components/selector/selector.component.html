@@ -1,0 +1,9 @@
+<select name="" id=""  (change)="getnews(this.display)"
+[(ngModel)]="display">
+<option *ngFor="let libchannel of channel "  value="{{libchannel.name}}"> {{libchannel.name}}</option>    
+   
+</select>
+<hr>
+<app-newscomp *ngIf="articles" [article]="articles" >
+
+</app-newscomp>

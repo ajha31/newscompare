@@ -1,29 +1,30 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { HttpClientModule } from '@angular/common/http'
+import {FormsModule} from '@angular/forms'
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-
-import { NselectorComponent } from './nselector/nselector.component';
-import { NsectionComponent } from './nsection/nsection.component';
-import { Section1Component } from './nsection/section1/section1.component';
-import { Section2Component } from './nsection/section2/section2.component';
-import { Section3Component } from './nsection/section3/section3.component';
+import { SinglenewsComponent } from './components/singlenews/singlenews.component';
+import { NewscompComponent } from './components/newscomp/newscomp.component';
+import { AllnewsComponent } from './components/allnews/allnews.component';
+import { SelectorComponent } from './components/selector/selector.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    NsectionComponent,
-    Section1Component,
-    NselectorComponent,
-    Section2Component,
-    Section3Component
+    SinglenewsComponent,
+    NewscompComponent,
+    AllnewsComponent,
+    SelectorComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
