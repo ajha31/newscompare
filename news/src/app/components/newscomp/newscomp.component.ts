@@ -12,7 +12,7 @@ export class NewscompComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    
+    console.log(this.article);
   }
 
 }

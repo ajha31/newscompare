@@ -1,8 +1,11 @@
 <div class="articles" *ngFor=" let article of article">
 <h1>{{article.topicNo}}</h1>
-<a [routerLink]="[article.heading]"> {{article.heading}}</a>
-<h3>{{article.information}}</h3>
-{{article.photo}}
-<h3>{{article.source}}</h3>
+
+<h1><a [routerLink]="[article.heading]"> {{article.heading}}</a></h1>
+
+<a href="{{article.source.link}}">{{article.source.text}}</a>
+<h4><a href="{{article.title.link}}">{{article.title.text}}</a></h4>
+{{article.information}}
+<img src="{{article.photo}}" alt="" srcset="" width="200px">
 
 </div>

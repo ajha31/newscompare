@@ -1,10 +1,13 @@
 const puppeteer=require('puppeteer');
 const mongoose=require('mongoose');
-
+const path=require('path');
 const newsmodeel = require('../models/newsmodel');
 var news = mongoose.model('news', newsmodeel, 'ndtv');
+let heading=require('../config/headings')
 
-const searchterm='covid';
+let searchterm=heading;
+
+
 //ndtv scrapping
 (async ()=>{
     let url=`https://www.ndtv.com/search?searchtext=${searchterm}`;
@@ -14,16 +17,22 @@ const searchterm='covid';
    let data= await page.evaluate((search)=>{
     let a=document.querySelector('#news_list').children[1].children[0]
     let b=[];
-    for( let i=1;i<11;i++){
+    for( let i=0;i<10;i++){
     let d={
        heading:search,
        topicNo:i,
-       title:a.children[i].children[0].innerHTML,
-       source:a.children[i].children[1].innerHTML,
-       photo:a.children[i].children[2].innerHTML,
+       title:{
+         link:a.children[i].children[0].children[0].href,
+         text:a.children[i].children[0].children[0].title
+       },
+      source:{
+         link:'https://www.ndtv.com',
+         text:a.children[3].children[1].innerText
+        },
+       photo:a.children[i].children[2].children[0].getAttribute('src') ,
        information:a.children[i].children[3].innerText
     }
-    b.push(d)
+    b.push(d);
   }
     return b;
     },searchterm);

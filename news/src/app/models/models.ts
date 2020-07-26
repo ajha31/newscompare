@@ -1,8 +1,8 @@
 export class news{
     _id:string;
     heading:string;
-    title:string;
-    source:string;
+    title:title;
+    source:title;
     photo:string;
     information:string;
     topicNo:number;
@@ -12,3 +12,8 @@ export class channels{
    type:string;
    name:string;
 }
+export class title{
+    link:string;
+    text:string;
+}
+

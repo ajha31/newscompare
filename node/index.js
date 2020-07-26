@@ -8,11 +8,15 @@ const dbconnect=require('./config/mconnect');
 const app=express();
 app.use(cors());
 
-
+//const indiatv=require('./news files/indiatv');
 //const zee =require('./news files/zeenews');
 //const ndtv=require('./news files/ndtv');
-//const indiatv=require('./news files/indiatv');
-
+ //const quint=require('./news files/quint');
+//const indianExpress=require('./news files/indian express');
+ //const abp=require('./news files/abp');
+ //const republic=require('./news files/republic bharat')
+ //const news18=require('./news files/news18')
+//const indiatoday=require('./news files/indiatoday')
 
 app.use('/all',require('./config/allnews'));
 app.use('/single',require('./config/singlenews'));
