@@ -1,7 +1,19 @@
+<app-header></app-header>
+<div class="desc">
+    Every article has perspective
+</div>
+<div class="label">
+    <span>conservative</span>
+    <span>moderate</span>
+    <span>libral</span>
+</div>
+
 <div class="main">
-    <app-selector *ngIf="libchan" [channel]="libchan" (getNews)="getlNews($event)" [articles]="larticles">
+    <app-selector *ngIf="conchan" [channel]="conchan" (getNews)="getlNews($event)" [articles]="larticles">
         <!-- here *ngif is used to prevent libch variable be initiated before the parent component -->
     </app-selector>
-    <app-selector *ngIf="conchan" [channel]="conchan"(getNews)="getcNews($event)" [articles]="carticles"></app-selector>
-    <app-selector *ngIf="modchan" [channel]="modchan" (getNews)="getmNews($event)"[articles]="marticles"></app-selector>
+
+    <app-sselector *ngIf="modchan" [channel]="modchan"(getNews)="getcNews($event)" [articles]="carticles" ></app-sselector>
+    
+    <app-selector *ngIf="libchan" [channel]="libchan" (getNews)="getmNews($event)"[articles]="marticles"></app-selector>
 </div>

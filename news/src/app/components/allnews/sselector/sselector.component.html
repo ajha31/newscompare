@@ -1,14 +1,13 @@
-
 <div class="selecter">
 
-  <mat-form-field appearance="fill" class='select'>
+  <mat-form-field appearance="fill" class='select' style="border-radius: 10px;">
     <mat-select  (selectionChange)="getnews(this.display)" (selectionChange)="getlogo(display)"
       [(value)]="display"  style="font-size: 20px; font-weight: bold;" >
       
 
       <mat-option class="option" *ngFor="let libchannel of channel "  value="{{libchannel.name}}" 
         style="height: 80px; font-weight: bold; " >{{libchannel.name}}
-        <img  src="{{libchannel.logo}}"  style="max-width: 100px; height: 60px; padding-top: 10%; " >
+        <img  src="{{libchannel.logo}}"  style="max-width: 100%; height: 60px; padding-top: 10%; " >
 
       </mat-option>
 
@@ -19,8 +18,7 @@
     <img src="{{logo}}" >
   </div>
 </div>
-  
-  
-<app-newscomp *ngIf="articles" [article]="articles"  >
 
-</app-newscomp>
+<app-snewscomp *ngIf="articles" [article]="articles"  >
+
+</app-snewscomp>

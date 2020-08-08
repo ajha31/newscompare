@@ -1,11 +1,18 @@
-<div class="articles" *ngFor=" let article of article">
-<h1>{{article.topicNo}}</h1>
 
-<h1><a [routerLink]="[article.heading]"> {{article.heading}}</a></h1>
+<div class="mainart" *ngFor=" let article of article">
+ <span id="heading"></span>
+ <article>
+        
+        <img src="{{article.photo}}" class="image">
+        <a href="{{article.source.link}}" class="source">{{article.source.text}}</a>
 
-<a href="{{article.source.link}}">{{article.source.text}}</a>
-<h4><a href="{{article.title.link}}">{{article.title.text}}</a></h4>
-{{article.information}}
-<img src="{{article.photo}}" alt="" srcset="" width="200px">
-
+        <div  class="sec2">
+        <a href="{{article.title.link}}">{{article.title.text}}</a>
+        </div>
+        
+        <div class="sec3">{{article.information}}</div>
+ </article>
+ <span></span>
+ <hr>
 </div>
+ 

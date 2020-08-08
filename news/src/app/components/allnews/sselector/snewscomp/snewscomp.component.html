@@ -1,0 +1,17 @@
+
+<div class="mainart" *ngFor=" let article of article">
+ 
+       <span id="heading">topic:<h2><a [routerLink]="[article.heading]"> {{article.heading}}</a></h2></span> 
+        <article>
+             <img src="{{article.photo}}" class="image">
+             <a href="{{article.source.link}}" class="source">{{article.source.text}}</a>
+        
+             <div  class="sec2">
+             <a href="{{article.title.link}}">{{article.title.text}}</a>
+             </div>
+             
+             <div class="sec3">{{article.information}}</div>
+        </article>
+        <span id='but'> <button class="button" [routerLink]="[article.heading]"> view full coverage </button></span>
+     <hr> 
+</div>

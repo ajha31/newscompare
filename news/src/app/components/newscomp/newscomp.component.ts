@@ -8,11 +8,13 @@ import{news} from '../../models/models'
 })
 export class NewscompComponent implements OnInit {
   @Input() article:news[];
-
+  
+  head:any[];
   constructor() { }
 
   ngOnInit(): void {
-    console.log(this.article);
+  
   }
-
+ 
+  
 }

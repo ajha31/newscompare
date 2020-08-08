@@ -2,11 +2,10 @@
     display: grid;
     grid-template-columns: 55% 35%;
     gap:10%;
-    position: sticky;
-    top: 0px;
+    position: sticky ;
+    top: 0px  ;
     background-color: white;
-    box-shadow: 0px 2px 0px  grey;
-    justify-self:center;
+    box-shadow: 0px 2px 0px grey;
     margin: 0px 10px 0px 10px ;
     padding-top: 20px;
     padding-left: 20px;
@@ -18,5 +17,4 @@
             height: 60px;
         } 
     }
-   
 }

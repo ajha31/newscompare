@@ -9,6 +9,11 @@ import { SinglenewsComponent } from './components/singlenews/singlenews.componen
 import { NewscompComponent } from './components/newscomp/newscomp.component';
 import { AllnewsComponent } from './components/allnews/allnews.component';
 import { SelectorComponent } from './components/selector/selector.component';
+import { SselectorComponent } from './components/allnews/sselector/sselector.component';
+import { SnewscompComponent } from './components/allnews/sselector/snewscomp/snewscomp.component';
+import { HeaderComponent } from './components/header/header.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import {MatSelectModule } from '@angular/material/select';
 
 
 
@@ -19,12 +24,17 @@ import { SelectorComponent } from './components/selector/selector.component';
     NewscompComponent,
     AllnewsComponent,
     SelectorComponent,
+    SselectorComponent,
+    SnewscompComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BrowserAnimationsModule,
+    MatSelectModule
   ],
   providers: [],
   bootstrap: [AppComponent]

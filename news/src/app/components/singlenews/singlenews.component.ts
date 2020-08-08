@@ -19,6 +19,7 @@ export class SinglenewsComponent implements OnInit {
   conchan:channels[];
   modchan:channels[];
   ur:string;
+  heading:string;
   
   constructor(private services:AllService,private route:Router) { }
 
@@ -42,6 +43,7 @@ export class SinglenewsComponent implements OnInit {
   getlNews(ch){
     this.services.getsinglenews(ch,this.ur).subscribe(n=>{
       this.larticles=n;
+      this.heading=this.larticles[0].heading;
     })
   }
   getmNews(ch){

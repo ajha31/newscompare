@@ -1,0 +1,28 @@
+
+    .header{
+        color: black;
+        display: grid;
+        grid-template-columns: 10% 40% 50% ;
+
+        width: 100vw;
+        height: 70px;
+        background: linear-gradient(270.54deg, #06BA02 0.66%, rgb(212, 212, 212) 50.66%, #FF5C00 99.28%);
+        .menu{
+            width: initial;
+            align-self: center;
+            margin: 20px;
+        }
+        .logo{
+            display: flex;
+           align-self: center;
+            span{
+                display: inline;
+                align-self: center;
+                font-size: 30px;
+                font-weight: bold;
+                text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+            }
+        }
+    }
+    
+

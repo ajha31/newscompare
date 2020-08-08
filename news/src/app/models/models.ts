@@ -11,6 +11,7 @@ export class channels{
     _id:string;
    type:string;
    name:string;
+   logo:string;
 }
 export class title{
     link:string;

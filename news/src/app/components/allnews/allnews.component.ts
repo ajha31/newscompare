@@ -17,6 +17,7 @@ export class AllnewsComponent implements OnInit {
   conchan:channels[];
   modchan:channels[];
   
+
   constructor(private services:AllService) { }
 
   ngOnInit():void{
@@ -41,6 +42,7 @@ export class AllnewsComponent implements OnInit {
   getmNews(ch){
     this.services.getnews(ch).subscribe(n=>{
       this.marticles=n;
+      
     })
   }
   getcNews(ch){
@@ -48,5 +50,6 @@ export class AllnewsComponent implements OnInit {
       this.carticles=n;
     })
   }
+ 
 
 }

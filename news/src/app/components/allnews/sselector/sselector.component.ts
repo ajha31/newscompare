@@ -1,13 +1,13 @@
 import { Component, OnInit, Input,Output,EventEmitter } from '@angular/core';
-import {channels,news} from '../../models/models';
-import {AllService} from '../../services/all.service'
+import {channels,news} from '../../../models/models';
+import {AllService} from '../../../services/all.service'
 
 @Component({
-  selector: 'app-selector',
-  templateUrl: './selector.component.html',
-  styleUrls: ['./selector.component.scss']
+  selector: 'app-sselector',
+  templateUrl: './sselector.component.html',
+  styleUrls: ['./sselector.component.scss']
 })
-export class SelectorComponent implements OnInit {
+export class SselectorComponent implements OnInit {
   @Input() channel:channels[];
   @Input() articles:news[];
   @Output() getNews:EventEmitter<any> = new EventEmitter();
@@ -20,6 +20,7 @@ export class SelectorComponent implements OnInit {
   ngOnInit(): void {
     this.display=this.channel[0].name;
     this.logo=this.channel[0].logo;
+
     this.getnews(this.display)
   }
 
@@ -33,6 +34,4 @@ export class SelectorComponent implements OnInit {
         }
     }
   }
-
 }
-
