@@ -1,8 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http'
-import {FormsModule} from '@angular/forms'
-
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule} from '@angular/forms'
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SinglenewsComponent } from './components/singlenews/singlenews.component';
@@ -11,12 +10,15 @@ import { AllnewsComponent } from './components/allnews/allnews.component';
 import { SelectorComponent } from './components/selector/selector.component';
 import { SselectorComponent } from './components/allnews/sselector/sselector.component';
 import { SnewscompComponent } from './components/allnews/sselector/snewscomp/snewscomp.component';
-import { HeaderComponent } from './components/header/header.component';
+import { HeaderComponent } from './components/utilities/header/header.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MatSelectModule } from '@angular/material/select';
-
-
-
+import { ModalboxComponent } from './components/utilities/modalbox/modalbox.component'
+import { MatSelectModule } from '@angular/material/select';
+import { MatDialogModule} from'@angular/material/dialog';
+import { MatButtonModule} from '@angular/material/button'
+import { MatIconModule} from '@angular/material/icon'
+import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { from } from 'rxjs';
 @NgModule({
   declarations: [
     AppComponent,
@@ -27,6 +29,7 @@ import {MatSelectModule } from '@angular/material/select';
     SselectorComponent,
     SnewscompComponent,
     HeaderComponent,
+    ModalboxComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,7 +37,11 @@ import {MatSelectModule } from '@angular/material/select';
     HttpClientModule,
     FormsModule,
     BrowserAnimationsModule,
-    MatSelectModule
+    MatSelectModule,
+    MatDialogModule,
+    MatButtonModule,
+    MatIconModule,
+    MatProgressSpinnerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

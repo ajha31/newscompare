@@ -51,7 +51,15 @@
         } 
         
     }
-    
+    .art{
+        position: relative;
+        animation-name: myanim;
+        animation-duration: 1s;
+    }
+    @keyframes myanim {
+        0%{ top: -100px;}
+        100%{top: 0px;}
+    }
     article:hover{
         
         box-shadow: 5px 10px 5px grey;

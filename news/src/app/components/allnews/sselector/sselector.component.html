@@ -2,7 +2,7 @@
 
   <mat-form-field appearance="fill" class='select' style="border-radius: 10px;">
     <mat-select  (selectionChange)="getnews(this.display)" (selectionChange)="getlogo(display)"
-      [(value)]="display"  style="font-size: 20px; font-weight: bold;" >
+      [(value)]="display"  style=" font-weight: bold;" >
       
 
       <mat-option class="option" *ngFor="let libchannel of channel "  value="{{libchannel.name}}" 

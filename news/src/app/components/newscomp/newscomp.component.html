@@ -1,13 +1,12 @@
 
 <div class="mainart" *ngFor=" let article of article">
  <span id="heading"></span>
- <article>
+ <article class="art">
         
         <img src="{{article.photo}}" class="image">
-        <a href="{{article.source.link}}" class="source">{{article.source.text}}</a>
-
+        <a (click)="openDialog(this.article.source.link)" class="source">{{article.source.text}}</a>
         <div  class="sec2">
-        <a href="{{article.title.link}}">{{article.title.text}}</a>
+        <a (click)="openDialog(this.article.title.link)">{{article.title.text}}</a>
         </div>
         
         <div class="sec3">{{article.information}}</div>

@@ -20,10 +20,18 @@
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 20px;
     margin-right: 20px;
+    position: sticky;
+    top: 0px;
+    z-index: 2;
     background: linear-gradient(270.54deg, #06BA02 0.66%, rgb(214, 214, 214) 50.66%, #FF5C00 99.28%);
     font-size: 20px;
     align-self: center;
     span{
         text-align: center;
+    }
+}
+@media (max-width:600px){
+    .main{
+    display: inline-block;
     }
 }

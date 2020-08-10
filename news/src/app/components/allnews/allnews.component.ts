@@ -16,7 +16,7 @@ export class AllnewsComponent implements OnInit {
   libchan:channels[];
   conchan:channels[];
   modchan:channels[];
-  
+ 
 
   constructor(private services:AllService) { }
 
@@ -50,6 +50,6 @@ export class AllnewsComponent implements OnInit {
       this.carticles=n;
     })
   }
- 
+  
 
 }
