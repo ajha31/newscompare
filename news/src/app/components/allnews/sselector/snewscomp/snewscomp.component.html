@@ -1,7 +1,9 @@
 
 <div class="mainart" *ngFor=" let article of article">
  
-       <span id="heading">topic:<h2><a [routerLink]="[article.heading]"> {{article.heading}}</a></h2></span> 
+       <span [ngClass]="(width == true)?'heading':'none'"> topic:<h2><a [routerLink]="[article.heading]"> {{article.heading}}</a></h2>
+     </span>
+
         <article class="art">
              <img src="{{article.photo}}" class="image">
              <a (click)="openDialog(this.article.source.link)" class="source">{{article.source.text}}</a>
@@ -12,6 +14,6 @@
              
              <div class="sec3">{{article.information}}</div>
         </article>
-        <span id='but'> <button class="button" [routerLink]="[article.heading]"> view full coverage </button></span>
+        <span [ngClass]="(width == true)?'but':'none'"> <button class="button" [routerLink]="[article.heading]"> view full coverage </button></span>
      <hr> 
 </div>

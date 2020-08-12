@@ -10,7 +10,6 @@ import {DomSanitizer} from '@angular/platform-browser';
 export class ModalboxComponent implements OnInit {
   url:any;
   spinner:boolean=true;
-  @ViewChild('iframe') iframe:ElementRef
   constructor( @Inject(MAT_DIALOG_DATA) public data: any, private sanitizer: DomSanitizer,
   public dialogRef: MatDialogRef<ModalboxComponent>,) { }
  
@@ -25,7 +24,6 @@ export class ModalboxComponent implements OnInit {
     setTimeout(()=>{
       this.spinner=false;
     },5000)
-    console.log(this.iframe.nativeElement);
     
   }
 }

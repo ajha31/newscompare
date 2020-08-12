@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {news,channels} from '../../models/models';
 import {AllService} from '../../services/all.service'
 
@@ -10,17 +10,26 @@ import {AllService} from '../../services/all.service'
 export class AllnewsComponent implements OnInit {
 
   title = 'news';
-  larticles:news[];
-  marticles:news[];
-  carticles:news[];
-  libchan:channels[];
-  conchan:channels[];
-  modchan:channels[];
- 
-
+  larticles:news[];marticles:news[];carticles:news[];
+  libchan:channels[];conchan:channels[];modchan:channels[];
+  lwidth:boolean;mwidth:boolean;cwidth:boolean;
+  width:any;
+  height:any;
+  @HostListener ('window:resize', ['$event'])
+  onResize(event) {
+  this.width = window.innerWidth;
+  this.setwidth(this.width)
+  }
+  @HostListener ('window:scroll', ['$event'])
+  onScroll(event){
+    this.height=window.pageYOffset;
+  }
   constructor(private services:AllService) { }
 
   ngOnInit():void{
+    this.width = window.innerWidth;
+    this.setwidth(this.width)
+    
     this.services.getlibchan().subscribe(channel => {
       this.libchan=channel;
     });
@@ -50,6 +59,17 @@ export class AllnewsComponent implements OnInit {
       this.carticles=n;
     })
   }
-  
+  setwidth(w){
+    if(w>600){
+      this.lwidth=false;
+     this. mwidth=true;
+     this.cwidth=false;
+    }
+    if(w<600){
+      this.lwidth=true;
+     this. mwidth=true;
+     this.cwidth=true;
+    }
+  }
 
 }

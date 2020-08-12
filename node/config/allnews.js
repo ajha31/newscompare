@@ -55,7 +55,7 @@ router.get('/abp',(req,res)=>{
 
 //for getting first article from indian express
 router.get('/indian%20express',(req,res)=>{
-    ie.find({"topicNo":0},(err,result)=>{
+    ie.find({"topicNo":1},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
     });

@@ -1,19 +1,19 @@
 <app-header></app-header>
 <div class="desc">
-    Every article has perspective
+    Every article has a perspective
 </div>
-<div class="label">
-    <span>conservative</span>
-    <span>moderate</span>
-    <span>libral</span>
+<div  [ngClass]="(height>200 ? 'labelf':'label' )" >
+    <a href="#c">conservative</a>
+    <a href="#m">moderate</a>
+    <a href="#l"> libral</a>
 </div>
-
+ 
 <div class="main">
-    <app-selector *ngIf="conchan" [channel]="conchan" (getNews)="getlNews($event)" [articles]="larticles">
+    <app-sselector id="c" *ngIf="conchan" [channel]="conchan" (getNews)="getlNews($event)" [articles]="larticles" [width]="cwidth">
         <!-- here *ngif is used to prevent libch variable be initiated before the parent component -->
-    </app-selector>
+    </app-sselector>
 
-    <app-sselector *ngIf="modchan" [channel]="modchan"(getNews)="getcNews($event)" [articles]="carticles" ></app-sselector>
+    <app-sselector id="m" *ngIf="modchan" [channel]="modchan"(getNews)="getcNews($event)" [articles]="carticles" [width]="mwidth"></app-sselector>
     
-    <app-selector *ngIf="libchan" [channel]="libchan" (getNews)="getmNews($event)"[articles]="marticles"></app-selector>
+    <app-sselector id="l"*ngIf="libchan" [channel]="libchan" (getNews)="getmNews($event)"[articles]="marticles" [width]="lwidth"></app-sselector>
 </div>

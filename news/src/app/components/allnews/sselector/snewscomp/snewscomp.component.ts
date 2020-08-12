@@ -11,13 +11,13 @@ import {MatDialog} from '@angular/material/dialog';
 export class SnewscompComponent implements OnInit {
 
   @Input() article:news[];
-  
+  @Input() width:boolean;
   head:any[];
   link:any;
   constructor(public dialog:MatDialog) { }
 
   ngOnInit(): void {
-    
+    console.log(this.width)
   }
   
   openDialog(n): void {
@@ -27,11 +27,6 @@ export class SnewscompComponent implements OnInit {
       height:'80%',
     
       data: {link: this.link}
-    });
-
-    dialogRef.afterClosed().subscribe(result => {
-      console.log('The dialog was closed');
-      
     });
   }
 

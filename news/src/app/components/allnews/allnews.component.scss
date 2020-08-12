@@ -8,18 +8,23 @@
     text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .label{
-    display: grid;
     position: sticky;
-    top:0px;
+    top: 0px;
     z-index: 2;
+    display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     margin-left: 20px;
     margin-right: 20px;
     background: linear-gradient(270.54deg, #06BA02 0.66%, rgb(214, 214, 214) 50.66%, #FF5C00 99.28%);
     font-size: 20px;
     align-self: center;
-    span{
+    a{
+        font-weight: normal;
         text-align: center;
+    }
+    a:hover{
+        color:white;
+        font-weight: bold;
     }
 }
 .main{
@@ -28,8 +33,35 @@
     margin-left: 10px;
     margin-right: 10px;
 }
+.labelf{
+   
+}
 @media (max-width:600px){
     .main{
     display: inline-block;
     }
+    .labelf{
+    position: fixed;
+    z-index: 1;
+    width: 92%;
+    top: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    margin-left: 20px;
+    margin-right: 20px;
+    
+    background: linear-gradient(270.54deg, #06BA02 0.66%, rgb(214, 214, 214) 50.66%, #FF5C00 99.28%);
+
+    align-self: center;
+    a{
+        font-size: 20px;
+        font-weight: normal;
+        text-align: center;
+    }
+    a:hover{
+        color:white;
+        font-weight: bold;
+    }
+    }
+   
 }

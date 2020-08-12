@@ -67,7 +67,7 @@
         100%{top: 0px;}
     }
     
-    #but{
+    .but{
         text-align: center;
         
         .button{
@@ -90,12 +90,9 @@
         }
     }
     
-    #heading{
-        
+    .heading{
         align-self: center;
         text-align: center;
-    
-
         h2{
             align-self: center;
             text-align: center;
@@ -104,4 +101,13 @@
         } 
     }
    
+}
+.none{
+    visibility: hidden;
+}
+@media(max-width:600px){
+    hr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
 }

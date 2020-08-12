@@ -17,7 +17,8 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatDialogModule} from'@angular/material/dialog';
 import { MatButtonModule} from '@angular/material/button'
 import { MatIconModule} from '@angular/material/icon'
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { MatProgressSpinnerModule} from '@angular/material/progress-spinner'
+import { MatToolbarModule} from '@angular/material/toolbar'
 import { from } from 'rxjs';
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { from } from 'rxjs';
     MatDialogModule,
     MatButtonModule,
     MatIconModule,
-    MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+    MatToolbarModule
   ],
   providers: [],
   bootstrap: [AppComponent]

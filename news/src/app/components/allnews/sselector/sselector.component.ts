@@ -10,8 +10,9 @@ import {AllService} from '../../../services/all.service'
 export class SselectorComponent implements OnInit {
   @Input() channel:channels[];
   @Input() articles:news[];
-  @Output() getNews:EventEmitter<any> = new EventEmitter();
   @Input() heading:string[]=[];
+  @Input() width:boolean;
+  @Output() getNews:EventEmitter<any> = new EventEmitter();
   display:string;
   logo:any;
 
