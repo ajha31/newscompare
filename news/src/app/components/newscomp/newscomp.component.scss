@@ -65,4 +65,9 @@
         box-shadow: 5px 10px 5px grey;
     }
 }
-
+@media(max-width:600px){
+    hr{
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+}

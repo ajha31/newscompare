@@ -1,17 +1,21 @@
 <app-header></app-header>
 <div class="topic">topic: <span class="h">{{heading}}</span> </div>
-<div class="label">
-    <span>conservative</span>
-    <span>moderate</span>
-    <span>libral</span>
+
+<div  [ngClass]="(height>200 ? 'labelf':'label' )" >
+    <a [routerLink] = "['/covid']"  fragment="co"> conservative</a>
+    <a [routerLink] = "['/covid']"  fragment="mo">moderate</a>
+    <a [routerLink] = "['/covid']"  fragment="li"> libral</a>
 </div>
+
 <div class="main">
-    <app-selector *ngIf="conchan" [channel]="conchan" (getNews)="getlNews($event)" [articles]="larticles">
+    <app-selector id="co" *ngIf="conchan" [channel]="conchan" (getNews)="getlNews($event)" [articles]="larticles">
         <!-- here *ngif is used to prevent libch variable be initiated before the parent component -->
     </app-selector>
 
-    <app-selector *ngIf="modchan" [channel]="modchan"(getNews)="getcNews($event)" [articles]="carticles" ></app-selector>
+    <app-selector id="mo" *ngIf="modchan" [channel]="modchan"(getNews)="getcNews($event)" [articles]="carticles" >
+    </app-selector>
     
-    <app-selector *ngIf="libchan" [channel]="libchan" (getNews)="getmNews($event)"[articles]="marticles"></app-selector>
+    <app-selector id="li" *ngIf="libchan" [channel]="libchan" (getNews)="getmNews($event)"[articles]="marticles">
+    </app-selector>
 </div>
 

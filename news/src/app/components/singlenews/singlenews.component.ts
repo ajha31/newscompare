@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 import {ActivatedRoute} from  "@angular/router"
 import {Router} from '@angular/router'
 import {news,channels} from '../../models/models';
@@ -20,7 +20,14 @@ export class SinglenewsComponent implements OnInit {
   modchan:channels[];
   ur:string;
   heading:string;
-  
+  height:any;
+
+  @HostListener ('window:scroll', ['$event'])
+  onScroll(event){
+    this.height=window.pageYOffset;
+    console.log(this.height);
+  }
+
   constructor(private services:AllService,private route:Router) { }
 
   ngOnInit():void{

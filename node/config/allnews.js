@@ -8,29 +8,29 @@ const zeemodel=mongoose.model('news',scema,'zeenews');
 const itvmodel=mongoose.model('news',scema,'indiatv');
 const ndtvmodel=mongoose.model('news',scema,'ndtv');
 const quint=mongoose.model('news',scema,'quint');
-const ie=mongoose.model('news',scema,'indian express');
+const ie=mongoose.model('news',scema,'indianExpress');
 const abp=mongoose.model('news',scema,'abp');
-const rb=mongoose.model('news',scema,'republic bharat');
-const it=mongoose.model('news',scema,'india today');
+const rb=mongoose.model('news',scema,'republic');
+const it=mongoose.model('news',scema,'indiaToday');
 const news18=mongoose.model('news',scema,'news18');
 
 
 //for getting first article from republic bharat 
-router.get('/republic',(req,res)=>{
+router.get('/Republic%20World',(req,res)=>{
     rb.find({"topicNo":0},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
     });
 });
 //for getting first article from india today
-router.get('/indiatoday',(req,res)=>{
+router.get('/India%20Today',(req,res)=>{
     it.find({"topicNo":0},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
     });
 });
 //for getting first article from news18
-router.get('/news18',(req,res)=>{
+router.get('/News18',(req,res)=>{
     news18.find({"topicNo":0},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
@@ -38,7 +38,7 @@ router.get('/news18',(req,res)=>{
 });
 
 //for getting first article from quint
-router.get('/quint',(req,res)=>{
+router.get('/The%20Quint',(req,res)=>{
     quint.find({"topicNo":0},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
@@ -46,7 +46,7 @@ router.get('/quint',(req,res)=>{
 });
 
 //for getting first article from abp
-router.get('/abp',(req,res)=>{
+router.get('/ABP',(req,res)=>{
     abp.find({"topicNo":0},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
@@ -54,7 +54,7 @@ router.get('/abp',(req,res)=>{
 });
 
 //for getting first article from indian express
-router.get('/indian%20express',(req,res)=>{
+router.get('/Indian%20Express',(req,res)=>{
     ie.find({"topicNo":1},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
@@ -62,7 +62,7 @@ router.get('/indian%20express',(req,res)=>{
 });
 
 //for getting the first  articles on a topic from zeenews
-router.get('/zeenews',(req,res)=>{
+router.get('/Zee%20News',(req,res)=>{
     zeemodel.find({"topicNo":0},(err,result)=>{
         if(err) console.log(err);
         res.send(result);
@@ -71,7 +71,7 @@ router.get('/zeenews',(req,res)=>{
 
 
 //for getting the first  articles on a topic from ndtv
-router.get('/ndtv',(req,res)=>{
+router.get('/NDTV',(req,res)=>{
     ndtvmodel.find({"topicNo":0},(err,result)=>{
         if (err) console.log(JSON.stringify(err));
         res.send(result);
@@ -79,8 +79,8 @@ router.get('/ndtv',(req,res)=>{
 });
 
 //for getting the first articles on a topic from indiatv
-router.get('/indiatv',(req,res)=>{
-    itvmodel.find({"topicNo":0},(err,result)=>{
+router.get('/India%20Tv',(req,res)=>{
+    itvmodel.find({"topicNo":1},(err,result)=>{
         if (err) console.log(JSON.stringify(err));
         res.send(result);
     });
