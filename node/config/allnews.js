@@ -80,7 +80,7 @@ router.get('/NDTV',(req,res)=>{
 
 //for getting the first articles on a topic from indiatv
 router.get('/India%20Tv',(req,res)=>{
-    itvmodel.find({"topicNo":1},(err,result)=>{
+    itvmodel.find({"topicNo":0},(err,result)=>{
         if (err) console.log(JSON.stringify(err));
         res.send(result);
     });

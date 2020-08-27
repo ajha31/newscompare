@@ -13,19 +13,19 @@ export class AllService {
   constructor(private http:HttpClient) { }
   
   getlibchan():Observable<channels[]>{
-    return this.http.get<channels[]>(`${this.url}/channels/libral`);
+    return this.http.get<channels[]>(`channels/libral`);
   }
   getconchan():Observable<channels[]>{
-    return this.http.get<channels[]>(`${this.url}/channels/conservative`)
+    return this.http.get<channels[]>(`channels/conservative`)
   }
   getmodchan():Observable<channels[]>{
-    return this.http.get<channels[]>(`${this.url}/channels/moderate`)
+    return this.http.get<channels[]>(`channels/moderate`)
   }
   
   getnews(ch):Observable<news[]>{
-    return this.http.get<news[]>(`${this.url}/all/${ch}`)
+    return this.http.get<news[]>(`all/${ch}`)
   }
   getsinglenews(ch,topic){
-    return this.http.get<news[]>(`${this.url}/single/${ch}${topic}`)
+    return this.http.get<news[]>(`single/${ch}${topic}`)
   }
 }

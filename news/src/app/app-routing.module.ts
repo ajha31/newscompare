@@ -7,13 +7,15 @@ const routes: Routes = [
   { path: '', component:AllnewsComponent },
   { path: ':topic', component:SinglenewsComponent }
 
-  
 ];
 
 @NgModule({
   imports: [  RouterModule.forRoot(routes, {
-    scrollPositionRestoration: 'enabled',
+   scrollPositionRestoration: 'enabled',
     anchorScrolling: 'enabled',
+    
+    //enableTracing:true
+   // useHash: true
   })],
   exports: [RouterModule]
 })
